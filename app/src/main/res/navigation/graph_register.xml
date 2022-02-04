@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_register"
+    app:startDestination="@id/thabt_name">
+
+    <fragment
+        android:id="@+id/thabt_name"
+        android:name="com.example.proje7.thabt_name"
+        android:label="fragment_thabt_name"
+        tools:layout="@layout/fragment_thabt_name" >
+        <action
+            android:id="@+id/action_thabt_name_to_fragm_etelaAt"
+            app:destination="@id/fragm_etelaAt" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragm_etelaAt"
+        android:name="com.example.proje7.fragm_etelaAt"
+        android:label="fragment_fragm_etela_at"
+        tools:layout="@layout/fragment_fragm_etela_at" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="birth_date"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+    </fragment>
+</navigation>
